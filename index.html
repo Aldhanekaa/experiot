@@ -34,9 +34,10 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link href="images/logo.ico" rel="shortcut icon">
-    
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" class="light">
   
 
   
@@ -50,7 +51,8 @@
           <span class="icon-close2 js-menu-toggle"></span>
         </div>
       </div>
-      <div class="site-mobile-menu-body"></div>
+      <div class="site-mobile-menu-body">
+      </div>
     </div>
    
     
@@ -63,6 +65,7 @@
             <h1 class="mb-1 site-logo"><a href="index.html" class="mb-0">ExperIoT4.0</a></h1>
           </div>
 
+          <!-- sections list -->
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
@@ -79,9 +82,20 @@
                 </li>
                 
                 <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
-                <li><a href="#services-section" class="nav-link">Services</a></li>
-                <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                <li><a href="#contact-section" class="nav-link">Get in Touch</a></li>
+                <li class="has-children">
+                  <a class="nav-link">More</a>
+                  <ul class="dropdown">
+                    <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
+                    <li><a href="#contact-section" class="nav-link">Get in Touch</a></li>
+                    <li><a href="#services-section" class="nav-link">Services</a></li>
+
+                  </ul>
+                </li>
+                <li class="btn"><a href="#" class="nav-link">Sign In</a></li>
+                <li class="btn"><a href="#" class="nav-link">Sign Up</a></li>
+                <li class="switch-mode">
+                  <input type="checkbox" name="" id="">
+                </li>
               </ul>
             </nav>
           </div>
