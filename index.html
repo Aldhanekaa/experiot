@@ -101,9 +101,6 @@
                 <ul class="site-menu" style="padding-left: 10px;">
                   <li class="btn"><a href="#" class="nav-link">Sign In</a></li>
                   <li class="btn"><a href="#" class="nav-link">Sign Up</a></li>
-                  <li class="switch-mode">
-                    🌗
-                  </li>
                 </ul>
               </ul>
             </nav>
@@ -118,7 +115,9 @@
 
     </header>
 
-
+    <div class="dark-light">
+      <i class="far fa-moon" id="moonIcon"></i>
+    </div>
 
     <div class="site-blocks-cover overlay" style="background-image: url(images/gelas.jpg);" data-aos="fade"
       id="home-section">
@@ -146,7 +145,7 @@
     </div>
 
 
-    <div class="site-section cta-big-image" id="about-section">
+    <div class="site-section cta-big-image" id="about-section" style="background: var(--header-bg-color);">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center" data-aos="fade">
@@ -192,7 +191,7 @@
       </div>
     </div>
 
-    <section class="site-section" id="portfolio-section">
+    <section class="site-section" id="portfolio-section" style="background: var(--header-bg-color);">
 
 
       <div class="container">
@@ -304,7 +303,8 @@
       </div>
     </section>
 
-    <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade">
+    <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade"
+      style="background: var(--header-bg-color); margin-top: -5px;">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
@@ -587,7 +587,7 @@
         </div>
       </div>
     </section>
-    <section class="site-section border-bottom" id="team-section">
+    <section class="site-section border-bottom" style="background: var(--header-bg-color);" id="team-section">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-8 text-center">
@@ -734,7 +734,54 @@
 
 
   <script src="js/main.js"></script>
+  <script>
+    const toggleDarkMode = document.querySelector('.dark-light');
+    const body = document.body;
 
+    const checkDarkMode = e => {
+      console.log(e)
+      let status = localStorage.getItem("mode");
+      let icon = toggleDarkMode.querySelector('#moonIcon');
+      if (e != undefined) {
+        if (status == 'light' || !status) {
+          body.classList.replace('dark', "light");
+          icon.classList.replace('fas', 'far')
+          toggleDarkMode.classList.remove('darkMode')
+
+        } else {
+          // console.log(status)
+          body.classList.replace('light', "dark")
+          // console.log('dark!')
+          icon.classList.replace('far', 'fas')
+          toggleDarkMode.classList.add('darkMode')
+        }
+      } else {
+        if (status == 'light' || !status) {
+          console.log(status)
+          body.classList.replace(status, "dark")
+          localStorage.setItem("mode", "dark");
+          // console.log('dark!')
+          icon.classList.replace('far', 'fas')
+          toggleDarkMode.classList.add('darkMode')
+        } else {
+          console.log(status)
+
+          body.classList.replace(status, "light");
+          localStorage.setItem("mode", "light");
+          icon.classList.replace('fas', 'far')
+          toggleDarkMode.classList.remove('darkMode')
+        }
+      }
+
+    };
+
+    toggleDarkMode.addEventListener('click', function () {
+      checkDarkMode()
+    });
+    // body.addEventListener('load', checkDarkMode)
+    window.addEventListener('load', checkDarkMode);
+
+  </script>
 
 
 </body>
