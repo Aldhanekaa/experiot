@@ -16,12 +16,17 @@
   --Primary: #007bff;
   --white:  #212835; 
   --black: #fefffd;
-  --header-bg-color: #1c1c24;
+  --header-bg-color: #323a4b;
+  /* --header-bg-color: #1c1c24; */
+
   --dropdown-bg :#263d63;
-  --navbar-shadow: 4px 0 20px -5px rgba(255, 255, 255, 0.3);
+  --navbar-shadow: 4px 0 10px -5px rgba(255, 255, 255, 0.3);
   --portfolio-buttons-bg: var(--white);
-  --circle: var(--white);
+  /* --circle: var(--white); */
+
   --pricing-li-remove : #dee2e62e;
+  --circle: #374054;
+
   --pricing-li: rgb(211, 211, 211);
 
 }
