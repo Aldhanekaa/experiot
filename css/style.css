@@ -11,6 +11,7 @@
   --circle: #f8f9fa;
   --pricing-li-remove : #dee2e6;
   --pricing-li: rgb(133, 133, 133);
+  
 }
 .dark {
   --Primary: #007bff;
@@ -28,8 +29,7 @@
   --circle: #374054;
 
   --pricing-li: rgb(211, 211, 211);
-
-}
+  }
 .is-sticky
 /* Base */
 html {
@@ -184,7 +184,8 @@ body:after {
     .site-footer {
       padding: 8em 0; } }
   .site-footer .border-top {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important; }
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important; 
+  }
   .site-footer p {
     color: #737373; }
   .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5 {
@@ -197,7 +198,7 @@ body:after {
     margin-bottom: 10px; }
   .site-footer .footer-heading {
     font-size: 16px;
-    color: var(--white); }
+    color: white; }
 
 .bg-text-line {
   display: inline;
